@@ -3,6 +3,16 @@
 */
 
 function wait(n) {
+    return new Promise((res,rej)=>{
+        setTimeout(() => {
+            // console.log('waited for ',n)
+            res('resolve afrer 2000 miliseconds')
+        }, n);
+    })
 }
+
+wait(2000).then((data)=>{
+    console.log(data)
+}).catch((err)=>console.log(err))
 
 module.exports = wait;

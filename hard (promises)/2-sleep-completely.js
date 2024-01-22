@@ -5,6 +5,14 @@
  */
 
 function sleep(milliseconds) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+        resolve('thread was waited by settimeout');
+        }, milliseconds);
+    })
+    
 }
-
+sleep(2000).then((data)=>{
+    console.log(data)
+})
 module.exports = sleep;
