@@ -9,7 +9,7 @@ const minutesSpan = document.getElementById('minutes')
 const secondsSpan = document.getElementById('seconds')
 
 
-let hours= 00
+let hours= 0
 
 let minutes = 59
 
